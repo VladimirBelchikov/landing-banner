@@ -43,6 +43,10 @@ const config = {
         generator: { filename: 'assets/[name][ext]' },
       },
       {
+        test: /\.(html)$/i,
+        use: ['html-loader'],
+      },
+      {
         test: /\.(sa|sc|c)ss$/i,
         use: [
           isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
