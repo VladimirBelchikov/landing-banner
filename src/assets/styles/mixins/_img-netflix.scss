@@ -1,0 +1,49 @@
+.img-netflix{
+  display: block;
+  height: 0;
+  position: relative;
+  overflow: hidden;
+  &_grey-preloader{
+    background-color: #efefef;
+  }
+  &_21x9{
+    padding-top: 42.85%;
+  }
+  &_16x9{
+    padding-top: 56.25%;
+  }
+  &_9x12{
+    padding-top: 133.33%;
+  }
+  &_4x3{
+    padding-top: 75%;
+  }
+  &_3x2{
+    padding-top: 66.66%;
+  }
+  &_1x1{
+    padding-top: 100%;
+  }
+  img{
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    margin: auto;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-position: center;
+  }
+  &_cover{
+    img{
+      object-fit: cover;
+    }
+  }
+  &_contain{
+    img{
+      object-fit: contain;
+    }
+  }
+}
