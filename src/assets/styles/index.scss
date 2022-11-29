@@ -2,6 +2,18 @@
 @import 'mixins/fluid-font-size';
 @import 'mixins/fonts';
 @import 'mixins/visually-hidden';
+@import 'vars';
 @import 'fonts';
 @import 'libs';
 @import 'core';
+//components
+@import '../components/UI/button';
+@import '../components/header/header';
+@import '../components/main-title/main-title';
+@import '../components/styled-ul/styled-ul';
+@import '../components/big-circle/big-circle';
+@import '../components/partners/partners';
+@import '../components/modal/modal';
+@import '../components/slider/slider';
+//sections
+@import '../sections/main/main';

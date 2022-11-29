@@ -1,9 +1,11 @@
-:root {}
+:root {
+}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Gotham';
 
   &:after,
   &:before {
@@ -13,4 +15,28 @@
 
 a {
   text-decoration: none;
+  transition: all 0.4s;
+}
+button {
+  border: none;
+  cursor: pointer;
+}
+input {
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+// TODO вынести backgroud в page-container
+body {
+  background: radial-gradient(99.62% 150.21% at 101.63% 52.83%, #404040 0%, #000000 100%);
+  overflow-x: hidden;
+}
+
+.page-container {
+  position: relative;
+  padding: 80px 0;
+  @media (max-width: 575px) {
+    padding: 50px 30px;
+  }
 }

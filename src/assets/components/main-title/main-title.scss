@@ -1,0 +1,6 @@
+.main-title {
+  font-weight: 300;
+  @include fluid-font-size(32px, 35px, 767px, 1199px);
+  line-height: 40px;
+  color: var(--color-white);
+}

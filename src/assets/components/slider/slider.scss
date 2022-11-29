@@ -1,0 +1,38 @@
+.slider {
+  position: relative;
+  &__wrapper {
+
+  }
+
+  &__slide {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    display: flex;
+    color: var(--color-black);
+
+    &_active {
+
+    }
+  }
+  &__card {
+    max-width: 270px;
+    padding: 20px;
+    border: 1px solid var(--color-black);
+    border-radius: 10px;
+    height: fit-content;
+  }
+  &__title {
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  &__price {
+    font-weight: 700;
+    font-size: 20px;
+  }
+  &__img {
+    margin-left: -100px;
+    margin-top: -60px;
+  }
+}

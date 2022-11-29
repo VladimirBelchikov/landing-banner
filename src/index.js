@@ -4,8 +4,10 @@ import './.htaccess';
 import './robots.txt';
 import './recaptcha.php';
 import './assets/styles/index.scss';
-
 import './assets/js/phonemask.js';
+import './assets/components/modal/modal.js'
+import './assets/components/styled-ul/styled-ul.js'
+import './assets/components/slider/slider.js'
 // import YandexMetrika from './assets/js/analytics/yandex-metrika.js';
 // import MangoOffice from './assets/js/analytics/mango-office.js';
 // import MailRuCounter from './assets/js/analytics/mail-ru-counter.js';
@@ -29,15 +31,15 @@ import FormSender from './assets/js/sender.js';
 
 /* eslint-enable no-new */
 
-const formSender = new FormSender({
-  createLeadUrl: 'https://collector.centr-to.ru/lead/create',
-  group_id: '1',
-  source: 'автосервисное.оборудование5.рф',
-  type: '1389157',
-  googleRecaptchaKey: '6LcQ6jgiAAAAAOw6tEjdzlNKmt1y5u_olyhCCOlS',
-});
+// const formSender = new FormSender({
+//   createLeadUrl: 'https://collector.centr-to.ru/lead/create',
+//   group_id: '1',
+//   source: 'автосервисное.оборудование5.рф',
+//   type: '1389157',
+//   googleRecaptchaKey: '6LcQ6jgiAAAAAOw6tEjdzlNKmt1y5u_olyhCCOlS',
+// });
 
-document.addEventListener('DOMContentLoaded', () => {
+// document.addEventListener('DOMContentLoaded', () => {
   // createYmapsObject();
-  formSender.init();
-});
+  // formSender.init();
+// });
