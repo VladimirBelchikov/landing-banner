@@ -29,7 +29,6 @@ callbackSlides.forEach((element) => {
       modalSlidesElement.querySelector('.modal__title').textContent = element.dataset.title;
     }
     if (event.currentTarget.dataset.img) {
-      console.log(modalSlidesElement.querySelector('.modal-slides__img'));
       modalSlidesElement.querySelector('.modal-slides__img').src = element.dataset.img;
     }
     Fancybox.show([{

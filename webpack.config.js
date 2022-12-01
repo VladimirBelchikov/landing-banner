@@ -38,7 +38,7 @@ const config = {
       },
       {
         test: /\.(ico|png|jpe?g|gif|svg|webp|mp4)$/i,
-        type: 'asset',
+        type: 'asset/resource',
         exclude: /fonts/,
         generator: { filename: 'assets/[name][ext]' },
       },

@@ -1,11 +1,16 @@
 .slider {
   &__slide {
-    position: relative;
     display: flex;
-    margin-left: -35px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    max-width: 234px;
+    height: 353px;
     color: var(--color-black);
     opacity: 0.5;
     cursor: pointer;
+
     &:hover .slider__price {
       color: var(--color-blue);
       transition: all 0.4s;
@@ -13,17 +18,16 @@
   }
 
   &__card {
-    max-width: 270px;
-    padding: 20px;
+    padding: 10px 15px;
     border: 1px solid var(--color-black);
     border-radius: 10px;
     height: fit-content;
   }
 
   &__title {
+    font-size: 16px;
     font-weight: 400;
-    font-size: 18px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
 
   &__price {
@@ -33,97 +37,23 @@
   }
 
   &__img {
-    position: absolute;
-    @media (max-width: 380px) {
-      max-width: 120px;
-    }
+    max-width: 234px;
+    max-height: 234px;
+    width: 80%;
   }
 }
 
-//Images
-
-.slider__img.cargobalance-machine {
-  top: 40%;
-  right: -9%;
-  @media (max-width: 380px) {
-    top: 54%;
-    right: 1%;
-  }
-}
-
+// Images
 .slider__img.lightmachine {
-  top: -18%;
-  right: -12%;
+  max-width: 139px;
   @media (max-width: 991px) {
-    max-width: 130px;
-  }
-  @media (max-width: 380px) {
-    max-width: 105px;
-    top: 2%;
-    right: -1%;
+    max-width: 90px;
   }
 }
-
-.slider__img.camera {
-  top: 60%;
-  right: -16%;
-  @media (max-width: 991px) {
-    top: 29%;
-    right: -14%;
-    max-width: 180px;
-  }
-  @media (max-width: 380px) {
-    top: 45%;
-    right: -10%;
-    max-width: 160px;
-  }
-}
-
-.slider__img.stand {
-  top: 50%;
-  right: -17%;
-  @media (max-width: 380px) {
-    top: 54%;
-    right: -3%;
-    max-width: 140px;
-  }
-}
-
-.slider__img.lift4 {
-  top: 58%;
-  right: -11%;
-  @media (max-width: 380px) {
-    top: 58%;
-    right: 1%;
-  }
-}
-
 .slider__img.lightbalance {
-  top: 26%;
-  right: -11%;
-  @media (max-width: 380px) {
-    top: 28%;
-    right: 2%;
-    max-width: 110px;
-  }
-}
-
-.slider__img.lift2 {
-  top: 52%;
-  right: -10%;
-  @media (max-width: 380px) {
-    top: 54%;
-    right: 1%;
-  }
-}
-
-.slider__img.cargo-machine {
-  top: 52%;
-  right: -18%;
-  @media (max-width: 380px) {
-    top: 68%;
-    right: 1%;
-    max-width: 130px;
+  max-width: 177px;
+  @media (max-width: 991px) {
+    max-width: 140px;
   }
 }
 
@@ -218,59 +148,49 @@
 
 .rotating-slider ul.slides .slide-inner {
   position: absolute;
-  bottom: 153px;
-  right: 177px;
+  bottom: 68px;
+  right: 230px;
   transform: rotate(75deg);
   @media (max-width: 991px) {
     transform: rotate(9deg);
-    bottom: 172px;
-    right: 106px;
+    bottom: 70px;
+    right: 95px;
   }
   @media (max-width: 767px) {
     transform: rotate(3deg);
-    bottom: 165px;
-    right: 165px;
+    bottom: 85px;
+    right: 167px;
   }
   @media (max-width: 575px) {
-    bottom: 163px;
-    right: 155px;
+    bottom: 83px;
+    right: 165px;
   }
   @media (max-width: 500px) {
-    bottom: 152px;
-    right: 175px;
-  }
-  @media (max-width: 480px) {
-    bottom: 163px;
-    right: 170px;
+    bottom: 76px;
+    right: 182px;
   }
   @media (max-width: 460px) {
     transform: rotate(1deg);
-    bottom: 160px;
-    right: 195px;
   }
   @media (max-width: 450px) {
-    right: 180px;
-  }
-  @media (max-width: 440px) {
-    right: 190px;
+    right: 205px;
   }
   @media (max-width: 430px) {
-    right: 200px;
-  }
-  @media (max-width: 400px) {
-    right: 210px;
+    right: 209px;
   }
   @media (max-width: 380px) {
+    right: 234px;
     transform: rotate(-1deg);
   }
   @media (max-width: 360px) {
-    right: 221px;
+    right: 237px;
   }
   @media (max-width: 342px) {
-    right: 229px;
+    right: 242px;
+    transform: rotate(-2deg);
   }
   @media (max-width: 328px) {
-    right: 234px;
+    right: 253px;
   }
 }
 
@@ -304,10 +224,13 @@
     bottom: -225px;
     right: -36px;
   }
+  @media (max-width: 575px) {
+    right: -12px;
+  }
   @media (max-width: 530px) {
-    transform: rotate(2deg);
+    transform: rotate(3deg);
     bottom: -62%;
-    right: -3%;
+    right: -2%;
   }
   @media (max-width: 480px) {
     transform: rotate(3deg);
