@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!--  TODO titile-->
     <title></title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+            integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://atuin.ru/demo/js/jquery.rotating-slider.min.js"></script>
 </head>
 <body>
 <div class="container page-container">
@@ -243,18 +246,104 @@
                         </div>
                     </div>
                 </div>
-                <img src="assets/img/slider-bg.svg" class="big-circle" width="780" alt="">
-                <div class="slider col-lg-5">
-                    <div class="slider__wrapper">
-                        <a href="#" class="slider__slide">
-                            <div class="slider__card">
-                                <h4 class="slider__title">Легковой шиномонтажный станок NORDBERG</h4>
-                                <span class="slider__price">от 72 030Р</span>
-                            </div>
-                            <img src="assets/img/light-machine.png" class="slider__img" alt="">
-                        </a>
+                <div class="rotating-slider-container">
+                    <div class="rotating-slider">
+                        <ul class="slides">
+                            <li>
+                                <div class="slide-inner">
+                                    <div class="slider__slide" data-title="Заявка на подбор легкового шиномонтажного станка" data-img="assets/img/light-machine.png" data-subject="Заявка на Легковой шиномонтажный станок">
+                                        <div class="slider__card">
+                                            <h4 class="slider__title">Легковой шиномонтажный станок NORDBERG</h4>
+                                            <span class="slider__price">от 72 030Р</span>
+                                        </div>
+                                        <img src="assets/img/light-machine.png" class="slider__img lightmachine" alt="">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="slide-inner">
+                                    <div class="slider__slide" data-title="Заявка на подбор грузового балансировочного станка" data-img="assets/img/cargobalance-machine.png" data-subject="Заявка на Грузовой балансировочный станок">
+                                        <div class="slider__card">
+                                            <h4 class="slider__title">Грузовой балансировочный станок NORDBERG</h4>
+                                            <span class="slider__price">от 72 030Р</span>
+                                        </div>
+                                        <img src="assets/img/cargobalance-machine.png"
+                                             class="slider__img cargobalance-machine" alt="">
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="slide-inner">
+                                    <div class="slider__slide slider__slide_bottom" data-title="Заявка на подбор грузового шиномонтажного станка" data-img="assets/img/cargo-machine.png" data-subject="Заявка на грузовой шиномонтажный станок">
+                                        <div class="slider__card">
+                                            <h4 class="slider__title">Грузовой шиномонтажный станок NORDBERG</h4>
+                                            <span class="slider__price">от 72 030Р</span>
+                                        </div>
+                                        <img src="assets/img/cargo-machine.png" class="slider__img cargo-machine"
+                                             alt="">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="slide-inner">
+                                    <div class="slider__slide slider__slide_bottom" data-title="Заявка на подбор двухстоечного подъемника" data-img="assets/img/lift2.png" data-subject="Заявка на Двухстоечные подъемники">
+                                        <div class="slider__card">
+                                            <h4 class="slider__title">Двухстоечные подъемники NORDBERG</h4>
+                                            <span class="slider__price">от 72 030Р</span>
+                                        </div>
+                                        <img src="assets/img/lift2.png" class="slider__img lift2" alt="">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="slide-inner">
+                                    <div class="slider__slide slider__slide_bottom" data-title="Заявка на подбор легкового балансировочного станка" data-img="assets/img/lightbalance.png" data-subject="Заявка на Легковой балансировочный станок">
+                                        <div class="slider__card">
+                                            <h4 class="slider__title">Легковой балансировочный станок NORDBERG</h4>
+                                            <span class="slider__price">от 72 030Р</span>
+                                        </div>
+                                        <img src="assets/img/lightbalance.png" class="slider__img lightbalance" alt="">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="slide-inner">
+                                    <div class="slider__slide slider__slide_bottom" data-title="Заявка на подбор четырехстоечного подъемника" data-img="assets/img/lightbalance.png" data-subject="Заявка на Четырехстоечные подъемники">
+                                        <div class="slider__card">
+                                            <h4 class="slider__title">Четырехстоечные подъемники NORDBERG</h4>
+                                            <span class="slider__price">от 72 030Р</span>
+                                        </div>
+                                        <img src="assets/img/lift4.png" class="slider__img lift4" alt="">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="slide-inner">
+                                    <div class="slider__slide slider__slide_bottom" data-title="Заявка на подбор стенда развал-схождения" data-img="assets/img/stand.png" data-subject="Заявка на Стенд развал-схождения">
+                                        <div class="slider__card">
+                                            <h4 class="slider__title">Стенд развал-схождения NORDBERG</h4>
+                                            <span class="slider__price">от 72 030Р</span>
+                                        </div>
+                                        <img src="assets/img/stand.png" class="slider__img stand" alt="">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="slide-inner">
+                                    <div class="slider__slide slider__slide_bottom" data-title="Заявка на подбор покрасочной камеры" data-img="assets/img/camera.png" data-subject="Заявка на Покрасочные камеры">
+                                        <div class="slider__card">
+                                            <h4 class="slider__title">Покрасочные камеры NORDBERG</h4>
+                                            <span class="slider__price">от 72 030Р</span>
+                                        </div>
+                                        <img src="assets/img/camera.png" class="slider__img camera" alt="">
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
+                <!--                END-->
             </div>
         </section>
     </main>
@@ -292,7 +381,7 @@
                 <button type="submit" class="filled-btn modal__btn">Оставить заявку</button>
             </form>
         </div>
-        <img src="assets/img/light-machine.png" alt="" width="157px">
+        <img src="assets/img/light-machine.png" alt="" class="modal-slides__img">
     </div>
 </div>
 </body>

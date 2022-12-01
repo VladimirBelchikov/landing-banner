@@ -5,7 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Gotham';
+  font-family: 'Gotham', sans-serif;
 
   &:after,
   &:before {
@@ -35,7 +35,8 @@ body {
 
 .page-container {
   position: relative;
-  padding: 80px 0;
+  padding-top: 80px;
+  padding-bottom: 19px;
   @media (max-width: 575px) {
     padding: 50px 30px;
   }
