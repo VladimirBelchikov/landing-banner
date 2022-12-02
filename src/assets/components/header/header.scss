@@ -2,9 +2,9 @@
   display: grid;
   align-items: center;
   grid-template-areas:
-  "logo logo"
-  "btn contacts";
-  grid-template-columns: repeat(auto-fit, minmax(175px, 230px));
+  "logo logo logo"
+  "btn contacts contacts";
+  grid-template-columns: repeat(auto-fit, minmax(220px, 250px));
   column-gap: 20px;
   row-gap: 30px;
 
@@ -61,21 +61,34 @@
 
   &__contacts {
     grid-area: contacts;
-
+    display: flex;
+    row-gap: 5px;
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
     & > span {
       font-weight: 700;
       font-size: 16px;
       color: var(--color-white);
       border-right: 1px solid var(--color-white);
       padding-right: 10px;
+      @media (max-width: 767px) {
+        border: none;
+      }
     }
 
     & > a {
       position: relative;
       font-weight: 300;
+      width: fit-content;
       color: var(--color-white);
+      padding-left: 10px;
       z-index: 111;
       transition: all 0.4s;
+      @media (max-width: 767px) {
+        padding-left: 0;
+      }
+
       &:hover {
         color: var(--hover-yellow);
         transition: all 0.4s;

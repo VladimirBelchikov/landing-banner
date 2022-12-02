@@ -1,4 +1,3 @@
-import Modal from 'bootstrap/js/src/modal.js';
 import { setUtmsToCookie, getUtmsFromCookie } from './utms.js';
 import { getCookie } from './cookie.js';
 import YandexMetrika from './analytics/yandex-metrika.js';
@@ -11,7 +10,7 @@ export default class FormSender {
     this.utms = getUtmsFromCookie();
     this.loading = false;
     this.createLeadUrl = props.createLeadUrl;
-    this.googleRecaptchaKey = props.googleRecaptchaKey;
+    this.googleRecaptchaKey = props.googleRecaptchaKey || null;
 
     this.data = {
       group_id: props.group_id,
@@ -65,15 +64,10 @@ export default class FormSender {
             YandexMetrika.reachGoal('supercel');
             MailRuCounter.reachGoal('supercel');
 
-            const showingModal = document.querySelector('.modal.show');
-            const successModal = new Modal(document.querySelector('.success-modal'));
-            if (showingModal) Modal.getInstance(showingModal).hide();
-            successModal.show();
-
             this.enableButton(submitButton, 'Данные отправлены', true);
           }
         })
-        .catch(() => {
+        .catch((err) => {
           // TODO обработать ошибку, выдать пользователю сообщение об отправке
           if (formData.get('delay') === '0') {
             this.enableButton(submitButton, 'Повторить отправку', false);
@@ -113,7 +107,7 @@ export default class FormSender {
 
   init() {
     document.querySelectorAll('form').forEach((form) => {
-      const phoneField = form.querySelector('input[name=phone]');
+      const phoneField = form.querySelector('input[type=tel]');
       const submitButton = form.querySelector('button[type=submit]');
       const buttonDefaultText = submitButton.textContent;
 
@@ -138,7 +132,7 @@ export default class FormSender {
           return;
         }
         const formData = this.createFormData(form, 0);
-        if (!window.grecaptcha) {
+        if (!window.grecaptcha || !this.googleRecaptchaKey) {
           this.postForm(formData, submitButton);
         } else {
           window.grecaptcha.ready(() => {

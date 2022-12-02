@@ -19,7 +19,6 @@ callbackButtons.forEach((element) => {
       src: modalElement,
       type: 'html',
     }]);
-    console.log(event.target.dataset.title);
   });
 });
 
@@ -31,11 +30,12 @@ callbackSlides.forEach((element) => {
     if (event.currentTarget.dataset.img) {
       modalSlidesElement.querySelector('.modal-slides__img').src = element.dataset.img;
     }
+    if (event.currentTarget.dataset.comment) {
+      modalSlidesElement.querySelector('input[name=comment]').value = element.dataset.comment;
+    }
     Fancybox.show([{
       src: modalSlidesElement,
       type: 'html',
     }]);
-    console.log(event.currentTarget.dataset.img);
-    console.log(event.currentTarget.dataset.title);
   });
 });

@@ -284,11 +284,13 @@
 
   @media (max-width: 1199px) {
     background: var(--color-blue);
+    color: var(--color-white);
     &:hover {
       background: #23459b;
     }
   }
   @media (max-width: 991px) {
+    color: var(--color-black);
     background: var(--color-white);
     &:hover {
       background: var(--color-yellow);
