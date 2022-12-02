@@ -64,7 +64,7 @@ export default class FormSender {
             YandexMetrika.reachGoal('supercel');
             MailRuCounter.reachGoal('supercel');
 
-            this.enableButton(submitButton, 'Данные отправлены', true);
+            this.enableButton(submitButton, 'Заявка отправлена', true);
           }
         })
         .catch((err) => {
