@@ -23,10 +23,13 @@
     display: flex;
     gap: 100px;
     margin-top: 15px;
+    @media (max-width: 1099px) {
+      gap: 50px;
+    }
     & > span {
       font-size: 14px;
       font-weight: 300;
-     color: var(--color-grey);
+     color: #363636;
       z-index: 3;
     }
   }
