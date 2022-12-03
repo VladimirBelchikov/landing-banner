@@ -18,6 +18,7 @@ callbackButtons.forEach((element) => {
     Fancybox.show([{
       src: modalElement,
       type: 'html',
+      autoFocus: false,
     }]);
   });
 });
@@ -36,6 +37,7 @@ callbackSlides.forEach((element) => {
     Fancybox.show([{
       src: modalSlidesElement,
       type: 'html',
+      autoFocus: false,
     }]);
   });
 });
