@@ -1,5 +1,3 @@
-// import './assets/img/favicon/favicon.ico';
-// import './assets/img/favicon/apple-touch-icon-180x180.png';
 import './.htaccess';
 import './robots.txt';
 import './recaptcha.php';
