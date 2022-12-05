@@ -16,6 +16,10 @@
       color: var(--color-blue);
       transition: all 0.4s;
     }
+
+    @media (min-width: 2000px) {
+      max-width: 260px;
+    }
   }
 
   &__card {
@@ -29,12 +33,20 @@
     font-size: 16px;
     font-weight: 400;
     margin-bottom: 10px;
+
+    @media (min-width: 2000px) {
+      font-size: 20px;
+    }
   }
 
   &__price {
     font-weight: 700;
     font-size: 20px;
     transition: all 0.4s;
+
+    @media (min-width: 2000px) {
+      font-size: 23px;
+    }
   }
 
   &__img {
@@ -71,8 +83,12 @@
   right: 0;
   top: 0;
   width: 70%;
-  height: 900px;
+  height: 100vh;
   overflow: hidden;
+
+  @media (min-width: 3500px) {
+   height: 1100px;
+  }
   @media (max-width: 1199px) {
     right: -120px;
   }
@@ -112,7 +128,7 @@
   @media (max-width: 460px) {
     transform: rotate(359deg);
   }
-  @media (max-width: 415px) {
+  @media (max-width: 420px) {
     transform: rotate(360deg);
   }
   @media (max-width: 380px) {
@@ -166,9 +182,12 @@
     bottom: 83px;
     right: 165px;
   }
+  @media (max-width: 520px) {
+    right: 180px;
+  }
   @media (max-width: 500px) {
     bottom: 76px;
-    right: 182px;
+    right: 190px;
   }
   @media (max-width: 460px) {
     transform: rotate(1deg);
@@ -177,13 +196,10 @@
     right: 194px;
   }
   @media (max-width: 430px) {
-    right: 190px;
+    right: 203px;
   }
-  @media (max-width: 415px) {
-    right: 200px;
-  }
-  @media (max-width: 405px) {
-    right: 202px;
+  @media (max-width: 390px) {
+    right: 215px;
   }
   @media (max-width: 380px) {
     right: 224px;
@@ -213,6 +229,11 @@
   gap: 40px;
   width: 100%;
   justify-content: center;
+
+  @media (min-width: 1920px) {
+    bottom: -305px;
+    right: 60px;
+  }
   @media (max-width: 1399px) {
     bottom: -230px;
     right: 55px;
@@ -222,7 +243,7 @@
     right: 206px;
   }
   @media (max-width: 991px) {
-    transform: rotate(10deg);
+    transform: rotate(11deg);
     bottom: -256px;
     right: -71px;
   }
@@ -247,7 +268,8 @@
     transform: rotate(1deg);
   }
   @media (max-width: 420px) {
-    right: 6%;
+    transform: rotate(0deg);
+    right: 7%;
   }
   @media (max-width: 400px) {
     right: 8%;

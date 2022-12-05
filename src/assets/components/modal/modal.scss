@@ -7,10 +7,18 @@
   padding: 30px;
   border-radius: 20px;
 
+  @media (min-width: 2000px) {
+    max-width: 490px;
+  }
+
   &__title {
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 15px;
+
+    @media (min-width: 2000px) {
+      font-size: 26px;
+    }
     @media (max-width: 575px) {
       max-width: 90%;
     }
@@ -20,6 +28,10 @@
     font-weight: 300;
     font-size: 16px;
     margin-bottom: 30px;
+
+    @media (min-width: 2000px) {
+      font-size: 20px;
+    }
   }
 
   &__input {
@@ -29,6 +41,11 @@
     border: 1px solid var(--color-black);
     border-radius: 5px;
     margin-bottom: 10px;
+
+    @media (min-width: 2000px) {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
   }
 
   &__btn {

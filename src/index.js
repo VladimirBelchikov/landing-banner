@@ -1,6 +1,5 @@
 import './.htaccess';
 import './robots.txt';
-import './recaptcha.php';
 import './assets/styles/index.scss';
 import './assets/js/phonemask.js';
 import './assets/components/modal/modal.js';
