@@ -3,10 +3,13 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ImageMinimizerPlugin from 'image-minimizer-webpack-plugin';
 import TerserPlugin from 'terser-webpack-plugin';
+import { readdirSync } from 'fs';
 
 const isDev = process.env.NODE_ENV !== 'production';
 
 const DIRNAME = resolve();
+const PAGES_DIR = resolve(DIRNAME, './src/');
+const PAGES = readdirSync(`${PAGES_DIR}`).filter((fileName) => fileName.endsWith('.html'));
 
 const config = {
   mode: isDev ? 'development' : 'production',
@@ -118,9 +121,12 @@ const config = {
     watchFiles: ['src/*.html'],
   },
 
-  plugins: [new HtmlWebpackPlugin({
-    template: 'src/index.html',
-  }),
+  plugins: [
+    ...PAGES.map((page) => new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/${page}`,
+      filename: `./${page}`,
+      inject: true,
+    })),
   ].concat(isDev ? [] : [
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].min.css',

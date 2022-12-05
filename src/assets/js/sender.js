@@ -65,6 +65,7 @@ export default class FormSender {
             MailRuCounter.reachGoal('supercel');
 
             this.enableButton(submitButton, 'Заявка отправлена', true);
+            globalThis.location.href = '/thank.html';
           }
         })
         .catch((err) => {
