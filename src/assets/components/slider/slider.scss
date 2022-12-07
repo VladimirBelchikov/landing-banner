@@ -121,7 +121,7 @@
     transform: rotate(350deg);
   }
   @media (max-width: 767px) {
-    transform: rotate(357deg);
+    transform: rotate(356deg);
     margin-top: -40px;
   }
   @media (max-width: 530px) {
@@ -182,25 +182,28 @@
     right: 145px;
   }
   @media (max-width: 767px) {
-    transform: rotate(3deg);
+    transform: rotate(4deg);
     right: 210px;
   }
   @media (max-width: 575px) {
     right: 209px;
   }
   @media (max-width: 520px) {
-    right: 223px;
+    right: 217px;
   }
   @media (max-width: 460px) {
     transform: rotate(1deg);
   }
   @media (max-width: 450px) {
-    right: 238px;
+    right: 225px;
   }
   @media (max-width: 430px) {
-    right: 247px;
+    right: 230px;
   }
-  @media (max-width: 390px) {
+  @media (max-width: 420px) {
+    right: 235px;
+  }
+  @media (max-width: 400px) {
     right: 254px;
   }
   @media (max-width: 380px) {
