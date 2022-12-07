@@ -56,14 +56,17 @@
     color: var(--color-black);
     transition: all 0.4s;
   }
-  &:hover svg {
+  &:hover .wa-icon {
     path {
       fill: var(--color-black);
       transition: all 0.4s;
     }
   }
-  & > svg {
+  & .wa-icon svg {
     transition: all 0.4s;
+    & > path {
+      fill: var(--color-yellow);
+    }
   }
 
   @media (min-width: 2000px) {

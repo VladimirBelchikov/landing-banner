@@ -55,11 +55,10 @@
   &__logo {
     grid-area: logo;
     @media (max-width: 991px) {
-      max-width: 500px;
+      max-width: 420px;
     }
     @media (max-width: 575px) {
-      max-width: 223px;
-      max-height: 22px;
+      max-width: 215px;
     }
   }
 

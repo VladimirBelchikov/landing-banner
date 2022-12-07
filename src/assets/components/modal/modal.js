@@ -15,6 +15,9 @@ callbackButtons.forEach((element) => {
     if (event.target.dataset.title) {
       modalElement.querySelector('.modal__title').textContent = element.dataset.title;
     }
+    if (event.target.dataset.description) {
+      modalElement.querySelector('.modal__text').textContent = element.dataset.description;
+    }
     Fancybox.show([{
       src: modalElement,
       type: 'html',
