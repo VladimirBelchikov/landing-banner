@@ -14,13 +14,11 @@
   &__title {
     font-size: 24px;
     font-weight: 700;
+    max-width: 95%;
     margin-bottom: 15px;
 
     @media (min-width: 2000px) {
       font-size: 26px;
-    }
-    @media (max-width: 575px) {
-      max-width: 90%;
     }
   }
 
@@ -53,6 +51,16 @@
     width: 100%;
     max-width: 100%;
   }
+  .innerSlider {
+    margin-top: 20px;
+    .swiper-wrapper {
+      height: auto;
+
+      .swiper-slide {
+        text-align: center;
+      }
+    }
+  }
 }
 
 .fancybox__carousel.is-draggable .fancybox__slide, .fancybox__carousel.is-draggable .fancybox__slide .fancybox__content {
@@ -60,8 +68,8 @@
 }
 
 .fancybox__content > .carousel__button.is-close {
-  top: 6%;
-  right: 5%;
+  top: 4%;
+  right: 3%;
   color: var(--color-black);
 }
 
@@ -72,11 +80,16 @@
 .modal-slides {
   max-width: 660px;
 
+  @media (max-width: 767px) {
+    max-width: 500px;
+  }
+  @media (max-width: 575px) {
+    max-width: 390px;
+  }
+  @media (max-width: 400px) {
+    max-width: 320px;
+  }
   &__wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
     gap: 20px;
     @media (max-width: 575px) {
       gap: 20px;
@@ -92,11 +105,7 @@
   }
 
   &__content {
-    max-width: 363px;
-    @media (max-width: 575px) {
-      width: 100%;
-      max-width: 100%;
-    }
+
   }
 }
 
@@ -107,3 +116,5 @@
 .modal-dialog {
   margin: 0;
 }
+
+

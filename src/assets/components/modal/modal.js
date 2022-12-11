@@ -5,6 +5,7 @@ const callbackButtons = document.querySelectorAll('.callback-btn');
 
 const modalSlidesElement = document.querySelector('#slides-callback');
 const callbackSlides = document.querySelectorAll('.slider__slide');
+const innerSlider = document.getElementById('slides-callback');
 
 // Fancybox.bind('#callback-modal]', {
 //
@@ -19,6 +20,7 @@ callbackButtons.forEach((element) => {
       src: modalElement,
       type: 'html',
       autoFocus: false,
+      dragToClose: false,
     }]);
   });
 });
@@ -28,9 +30,18 @@ callbackSlides.forEach((element) => {
     if (event.currentTarget.dataset.title) {
       modalSlidesElement.querySelector('.modal__title').textContent = element.dataset.title;
     }
+
     if (event.currentTarget.dataset.img) {
-      modalSlidesElement.querySelector('.modal-slides__img').src = element.dataset.img;
+      const masImg = element.dataset.img.split('&');
+      console.log(masImg);
+      if (masImg.length > 0) {
+        const slidesImg = innerSlider.querySelectorAll('.modal-slides__img');
+        slidesImg.forEach((img, index) => {
+          img.src = masImg[index];
+        });
+      }
     }
+
     if (event.currentTarget.dataset.comment) {
       modalSlidesElement.querySelector('input[name=comment]').value = element.dataset.comment;
     }
@@ -38,6 +49,7 @@ callbackSlides.forEach((element) => {
       src: modalSlidesElement,
       type: 'html',
       autoFocus: false,
+      dragToClose: false,
     }]);
   });
 });
