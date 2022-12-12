@@ -39,6 +39,11 @@ callbackSlides.forEach((element) => {
         slidesImg.forEach((img, index) => {
           img.src = masImg[index];
         });
+      //   innerSlider.querySelectorAll('.modal-slides__img').forEach((el) => el.remove());
+      //   masImg.forEach((el) => {
+      //     const newImg = innerSlider.querySelector('.swiper-slide').createElement('img');
+      //     newImg.src = el;
+      //   });
       }
     }
 

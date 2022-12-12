@@ -5,6 +5,7 @@ import './assets/js/phonemask.js';
 import './assets/components/modal/modal.js';
 import './assets/components/styled-ul/styled-ul.js';
 import './assets/components/slider/slider.js';
+import './assets/components/form/form.js';
 import './assets/js/geo.js';
 import './assets/js/swiper.js';
 import YandexMetrika from './assets/js/analytics/yandex-metrika.js';

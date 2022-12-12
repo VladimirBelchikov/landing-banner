@@ -260,7 +260,7 @@
                             <li>
                                 <div class="slide-inner">
                                     <div class="slider__slide"
-                                         data-title="Получить полный каталог на все 15 моделей с ценами и фото"
+                                         data-title="Шиномонтажные станки для легковых авто NORDBERG"
                                          data-img="assets/light-machine1.jpg&assets/light-machine2.jpg&assets/light-machine3.jpg&assets/light-machine4.jpg&assets/light-machine5.jpg&assets/light-machine6.jpg"
                                          data-comment="Заявка на Легковой шиномонтажный станок">
                                         <img src="assets/img/slider/light-machine.png" class="slider__img lightmachine"
@@ -275,7 +275,8 @@
                             <li>
                                 <div class="slide-inner">
                                     <div class="slider__slide slider__slide_bottom"
-                                         data-title="Получить полный каталог на все 4 модели с ценами и фото" data-img="assets/camera.png"
+                                         data-title="Получить полный каталог на все 4 модели с ценами и фото"
+                                         data-img="assets/camera.png"
                                          data-comment="Заявка на Покрасочные камеры">
                                         <img src="assets/img/slider/camera.png" class="slider__img camera" alt="">
                                         <div class="slider__card">
@@ -387,10 +388,10 @@
                     менеджер Nordberg и даст подробную
                     консультацию по оборудованию.
                 </p>
-                <form>
+                <form class="form">
                     <input type="hidden" name="comment" value="Заявка на подбор оборудования">
-                    <input type="text" placeholder="Имя" name="name" class="modal__input">
-                    <input type="tel" placeholder="+7(___)___-__-__" name="phone" class="modal__input" required>
+                    <input type="text" placeholder="Имя" name="name" class="form__input">
+                    <input type="tel" placeholder="+7(___)___-__-__" name="phone" class="form__input" required>
                     <button type="submit" class="filled-btn modal__btn">Оставить заявку</button>
                 </form>
             </div>
@@ -400,40 +401,100 @@
 <div class="modal-slides modal" id="slides-callback">
     <div class="modal-slides__wrapper">
         <div class="modal-slides__content">
-            <h3 class="modal__title"></h3>
+            <div class="modal-slides__available">
+                На складе сейчас: <span class="modal-slides__stock">23 модели</span> <br>
+                Специальные условия на <span class="modal-slides__special">8 моделей</span> <br>
+                Бонус: <b>Бесплатная доставка и установка</b>
+            </div>
             <p class="modal__text">
-                Отправим полный каталог в течение 10 секунд после оставления заявки
+                Оборудование Nordberg - самое продаваемое оборудование
+                на территории России. Идеальный баланс цена/качество и широкий модельный ряд под любые задачи.
             </p>
-            <form>
+            <div class="modal-slides__info">
+                <p><b>Напряжение:</b> <span class="modal-slides__voltage">220-380В</span></p>
+                <p><b class="modal-slides__type-title">Тип станка:</b> <span class="modal-slides__type">Автоматический или полуавтоматический</span>
+                </p>
+                <p><b>Диаметр колес: </b> <span class="modal-slides__diameter">76-380мм/3-15</span></p>
+                <span class="modal-slides__credit-title">В кредит или лизинг: <b class="modal-slides__credit">от 4 660 ₽/мес</b></span>
+            </div>
+            <form class="form">
                 <input type="hidden" name="comment" value="">
-                <input type="text" placeholder="Имя" name="name" class="modal__input">
-                <input type="tel" placeholder="+7(___)___-__-__" name="phone" class="modal__input" required>
-                <button type="submit" class="filled-btn modal__btn">Оставить заявку</button>
+                <fieldset class="form__choose-messenger" id="messenger">
+                    <label class="form__messenger-label">
+                        <input type="radio" name="messenger" value="telegram">
+                        <img src="assets/img/icons/telegram-logo.svg" alt=""/>
+                        <p>Телеграм</p>
+                    </label>
+                    <label class="form__messenger-label">
+                        <input type="radio" name="messenger" value="whatsapp">
+                        <img src="assets/img/icons/whatsapp-logo.svg" alt=""/>
+                        <p>Вотсап</p>
+                    </label>
+                    <label class="form__messenger-label">
+                        <input type="radio" name="messenger" value="viber">
+                        <img src="assets/img/icons/viber-logo.svg" alt=""/>
+                        <p>Вайбер</p>
+                    </label>
+                    <label class="form__messenger-label">
+                        <input type="radio" name="messenger" value="sms">
+                        <img src="assets/img/icons/message-logo.svg" alt=""/>
+                        <p>Смс</p>
+                    </label>
+                </fieldset>
+                <div class="form__bottomline">
+                    <input type="tel" placeholder="+7(___)___-__-__" name="phone" class="form__input " required>
+                    <button type="submit" class="filled-btn modal__btn modal-slides__btn">СКАЧАТЬ ПОЛНЫЙ КАТАЛОГ С ЦЕНАМИ</button>
+                </div>
             </form>
         </div>
-        <div class="innerSlider swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="assets/img/inner-slider/light-machine1.jpg" alt="" class="modal-slides__img">
+        <div class="modal-slides__sliders">
+            <h3 class="modal__title"></h3>
+            <div class="innerSlider swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="assets/img/inner-slider/light-machine1.jpg" alt="" class="modal-slides__img">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/inner-slider/light-machine2.jpg" alt="" class="modal-slides__img">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/inner-slider/light-machine3.jpg" alt="" class="modal-slides__img">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/inner-slider/light-machine4.jpg" alt="" class="modal-slides__img">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/inner-slider/light-machine5.jpg" alt="" class="modal-slides__img">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/inner-slider/light-machine6.jpg" alt="" class="modal-slides__img">
+                    </div>
                 </div>
-                <div class="swiper-slide">
-                    <img src="assets/img/inner-slider/light-machine2.jpg" alt="" class="modal-slides__img">
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/img/inner-slider/light-machine3.jpg" alt="" class="modal-slides__img">
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/img/inner-slider/light-machine4.jpg" alt="" class="modal-slides__img">
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/img/inner-slider/light-machine5.jpg" alt="" class="modal-slides__img">
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/img/inner-slider/light-machine6.jpg" alt="" class="modal-slides__img">
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            <div class="thumbsSlider swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="assets/img/inner-slider/light-machine1.jpg" alt="" class="modal-slides__thumb-img">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/inner-slider/light-machine2.jpg" alt="" class="modal-slides__thumb-img">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/inner-slider/light-machine3.jpg" alt="" class="modal-slides__thumb-img">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/inner-slider/light-machine4.jpg" alt="" class="modal-slides__thumb-img">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/inner-slider/light-machine5.jpg" alt="" class="modal-slides__thumb-img">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/inner-slider/light-machine6.jpg" alt="" class="modal-slides__thumb-img">
+                    </div>
                 </div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
         </div>
     </div>
 </div>
