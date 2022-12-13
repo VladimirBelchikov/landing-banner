@@ -313,12 +313,15 @@
 }
 .dquiz-modal-wrapper {
     display: none;
+    max-width: 100%;
+    padding: 30px;
+    border-radius: 13px;
 }
 .dquiz {
     max-width: 100%;
     -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, .15);
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, .15);
-    border-radius: 4px;
+    border-radius: 13px;
     color: #363636;
     line-height: 1.6;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -435,7 +438,8 @@
     margin: 0;
     font-size: 16px;
     font-weight: 500;
-    color: #5c5c5c
+    color: #5c5c5c;
+    max-width: 95%;
 }
 
 .dquiz__title svg {
