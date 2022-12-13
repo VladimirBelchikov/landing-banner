@@ -1,7 +1,9 @@
 import { Fancybox } from '@fancyapps/ui/src/Fancybox/index.js';
 
 const modalElement = document.querySelector('#callback-modal');
-const callbackButtons = document.querySelectorAll('.callback-btn');
+const callbackButton = document.querySelector('.callback-btn');
+const callbackQuizBtn = document.querySelector('.dquiz-callback-btn');
+const dquizModalWindow = document.querySelector('.dquiz-modal-wrapper');
 
 const modalSlidesElement = document.querySelector('#slides-callback');
 const callbackSlides = document.querySelectorAll('.slider__slide');
@@ -12,21 +14,28 @@ const thumbsSlider = document.querySelector('.thumbsSlider');
 //
 // });
 
-callbackButtons.forEach((element) => {
-  element.addEventListener('click', (event) => {
-    if (event.target.dataset.title) {
-      modalElement.querySelector('.modal__title').textContent = element.dataset.title;
-    }
-    Fancybox.show([{
-      src: modalElement,
-      type: 'html',
-      autoFocus: false,
-      dragToClose: false,
-    }]);
-  });
+callbackButton?.addEventListener('click', (event) => {
+  if (event.target.dataset.title) {
+    modalElement.querySelector('.modal__title').textContent = callbackButton.dataset.title;
+  }
+  Fancybox.show([{
+    src: modalElement,
+    type: 'html',
+    autoFocus: false,
+    dragToClose: false,
+  }]);
 });
 
-callbackSlides.forEach((element) => {
+callbackQuizBtn?.addEventListener('click', (event) => {
+  Fancybox.show([{
+    src: dquizModalWindow,
+    type: 'html',
+    autoFocus: false,
+    dragToClose: false,
+  }]);
+});
+
+callbackSlides?.forEach((element) => {
   element.addEventListener('click', (event) => {
     if (event.currentTarget.dataset.title) {
       modalSlidesElement.querySelector('.modal__title').textContent = element.dataset.title;

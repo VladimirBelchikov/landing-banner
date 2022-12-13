@@ -1,5 +1,5 @@
 const messenger = document.getElementById('messenger');
-messenger.addEventListener('change', (e) => {
+messenger?.addEventListener('change', (e) => {
   // eslint-disable-next-line no-restricted-syntax
   for (const el of messenger.children) {
     el.classList.remove('form__messenger-label_active');

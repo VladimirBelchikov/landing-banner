@@ -8,11 +8,14 @@ import './assets/components/slider/slider.js';
 import './assets/components/form/form.js';
 import './assets/js/geo.js';
 import './assets/js/swiper.js';
+import './assets/js/dquiz.min.js';
 import YandexMetrika from './assets/js/analytics/yandex-metrika.js';
 import MangoOffice from './assets/js/analytics/mango-office.js';
 import Envybox from './assets/js/analytics/envybox.js';
 import FormSender from './assets/js/sender.js';
 import Roistat from './assets/js/analytics/roistat.js';
+
+window.dQuiz();
 
 /* eslint-disable no-new */
 const analyticsTimeout = setTimeout(() => {

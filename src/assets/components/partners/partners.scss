@@ -26,8 +26,15 @@
 
   &__row {
     display: flex;
+    align-items: center;
     gap: 35px;
     margin-top: 30px;
+
+    .tink-icon {
+      img {
+        width: 65px;
+      }
+    }
   }
 
   &__bottom-info {
