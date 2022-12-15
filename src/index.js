@@ -20,7 +20,7 @@ window.dQuiz();
 /* eslint-disable no-new */
 const analyticsTimeout = setTimeout(() => {
   new YandexMetrika([{
-    id: 91481783,
+    id: 91696695,
     params: { webvisor: true },
   }]);
   new MangoOffice(24354);
@@ -39,7 +39,7 @@ const envyboxTimeout = setTimeout(() => {
 const formSender = new FormSender({
   createLeadUrl: 'https://collector.centr-to.ru/lead/create',
   group_id: '1',
-  source: 'nordberg-auto.ru',
+  source: 'ae-t-auto.ru',
   type: '1469566',
 });
 
