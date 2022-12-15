@@ -20,7 +20,7 @@ window.dQuiz();
 /* eslint-disable no-new */
 const analyticsTimeout = setTimeout(() => {
   new YandexMetrika([{
-    id: 91481783,
+    id: 91694838,
     params: { webvisor: true },
   }]);
   new MangoOffice(24354);
