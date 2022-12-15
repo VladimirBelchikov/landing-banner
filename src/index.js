@@ -40,7 +40,7 @@ const formSender = new FormSender({
   createLeadUrl: 'https://collector.centr-to.ru/lead/create',
   group_id: '1',
   source: 'ae-t-auto.ru',
-  type: '1469566',
+  type: '1469604',
 });
 
 document.addEventListener('DOMContentLoaded', () => {
