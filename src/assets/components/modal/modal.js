@@ -57,7 +57,6 @@ callbackSlides?.forEach((element) => {
           `<ul>
                     <li><b>${masInfo[0]}</b>${masInfo[1]}</li>
                     <li><b>${masInfo[2]}</b>${masInfo[3]}</li>
-                    <li><b>${masInfo[4]}</b>${masInfo[5]}</li>
                   </ul>`,
         );
       }
