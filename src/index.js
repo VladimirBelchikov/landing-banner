@@ -42,7 +42,7 @@ const formSender = new FormSender({
   source: 'sivik-auto.ru',
   type: '1469566',
 });
-
+/* TODO type and yandex */
 document.addEventListener('DOMContentLoaded', () => {
   formSender.init();
 });
