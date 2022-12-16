@@ -51,6 +51,11 @@
   transition: all 0.4s;
   z-index: 111;
 
+  .wa-icon > svg {
+    path {
+      fill: var(--color-yellow);
+    }
+  }
   &:hover {
     background: var(--color-yellow);
     color: var(--color-black);

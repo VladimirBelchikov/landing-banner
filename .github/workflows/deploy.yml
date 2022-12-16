@@ -2,7 +2,7 @@ name: Deploy
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "Sivik" ]
 
 jobs:
   deploy:
@@ -22,4 +22,4 @@ jobs:
 
       - run: npm ci
       - run: npm run build
-      - run: cd ./dist && rsync -e "ssh -i $HOME/.ssh/id_rsa -o StrictHostKeyChecking=no" --archive --compress --delete . a49535_nor1@a49535.ftp.mchost.ru:httpdocs
+      - run: cd ./dist && rsync -e "ssh -i $HOME/.ssh/id_rsa -o StrictHostKeyChecking=no" --archive --compress --delete . a49535_sivik@a49535.ftp.mchost.ru:httpdocs

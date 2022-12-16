@@ -39,7 +39,7 @@ const envyboxTimeout = setTimeout(() => {
 const formSender = new FormSender({
   createLeadUrl: 'https://collector.centr-to.ru/lead/create',
   group_id: '1',
-  source: 'nordberg-auto.ru',
+  source: 'sivik-auto.ru',
   type: '1469566',
 });
 
