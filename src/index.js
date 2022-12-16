@@ -20,7 +20,7 @@ window.dQuiz();
 /* eslint-disable no-new */
 const analyticsTimeout = setTimeout(() => {
   new YandexMetrika([{
-    id: 91481783,
+    id: 91715887,
     params: { webvisor: true },
   }]);
   new MangoOffice(24354);
@@ -39,10 +39,10 @@ const envyboxTimeout = setTimeout(() => {
 const formSender = new FormSender({
   createLeadUrl: 'https://collector.centr-to.ru/lead/create',
   group_id: '1',
-  source: 'sivik-auto.ru',
-  type: '1469566',
+  source: 'atis-rus.ru',
+  type: '1469608',
 });
-/* TODO type and yandex */
+
 document.addEventListener('DOMContentLoaded', () => {
   formSender.init();
 });
