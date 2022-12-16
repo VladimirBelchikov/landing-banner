@@ -48,7 +48,6 @@ callbackSlides?.forEach((element) => {
     }
     if (event.currentTarget.dataset.info) {
       const masInfo = element.dataset.info.split('&');
-      console.log(masInfo);
       if (masInfo.length > 0) {
         const infoWrapper = modalSlidesElement.querySelector('.modal-slides__info');
         const oldInfo = infoWrapper.children;
