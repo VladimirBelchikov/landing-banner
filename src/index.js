@@ -8,14 +8,12 @@ import './assets/components/slider/slider.js';
 import './assets/components/form/form.js';
 import './assets/js/geo.js';
 import './assets/js/swiper.js';
-import './assets/js/dquiz.min.js';
 import YandexMetrika from './assets/js/analytics/yandex-metrika.js';
 import MangoOffice from './assets/js/analytics/mango-office.js';
 import Envybox from './assets/js/analytics/envybox.js';
 import FormSender from './assets/js/sender.js';
 import Roistat from './assets/js/analytics/roistat.js';
-
-window.dQuiz();
+import Quiz from './assets/components/quiz/quiz.js';
 
 /* eslint-disable no-new */
 const analyticsTimeout = setTimeout(() => {
@@ -42,7 +40,10 @@ const formSender = new FormSender({
   source: 'trommelberg-rus.ru',
   type: '1469606',
 });
-
+const quiz = new Quiz({
+  completeText: 'Отлично! <br> Мы подобрали для вас подходящий мини-погрузчик',
+});
 document.addEventListener('DOMContentLoaded', () => {
   formSender.init();
+  quiz.init();
 });

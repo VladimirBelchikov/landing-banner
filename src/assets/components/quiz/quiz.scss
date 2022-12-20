@@ -1,0 +1,226 @@
+.quiz {
+  position: relative;
+
+  &__complete-card {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    opacity: 0;
+    z-index: -1;
+    background: #FFFFFF;
+
+    @media (min-width: 700px) {
+      padding: 43px 55px;
+    }
+
+    & > .quiz__title {
+      margin-top: 0;
+      margin-bottom: 10px;
+      padding: 0;
+    }
+
+    & > .quiz__description {
+      @include fluid-font-size(15px, 18px, 767px, 1199px);
+      margin-bottom: 10px;
+      flex: 1 1 auto;
+    }
+
+    & > .button {
+    }
+
+    &_active {
+      opacity: 1;
+      z-index: 1;
+      transition: opacity 0.25s ease-in;
+    }
+  }
+  .button {
+    color: var(--color-black);
+    padding: 10px 18px;
+    border: 1px solid var(--color-black);
+    border-radius: 5px;
+  }
+  .button_disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    &:hover {
+      background: var(--color-yellow)!important;
+    }
+  }
+  &__button {
+    @include fluid-font-size(14px, 16px, 767px, 1199px);
+    font-weight: 700;
+    background: var(--color-yellow);
+    border: none!important;
+    transition: all 0.4s;
+    &:hover {
+      background: var(--hover-yellow);
+      transition: all 0.4s;
+    }
+  }
+  // Quiz cards
+  .quiz-card {
+    display: flex;
+    flex-direction: column;
+
+    &__answers-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    &__title {
+      color: $black;
+      text-align: left;
+      margin-top: 20px;
+      margin-bottom: 12px;
+      font-size: 19px;
+    }
+
+    &__question {
+      @include fluid-font-size(20px, 28px, 450px, 1000px);
+      font-weight: bold;
+      margin: 15px 0 30px;
+
+    }
+
+    &__label {
+      position: relative;
+    }
+
+    &__input {
+      @include visually-hidden();
+
+      &:checked ~ span {
+        background-color: var(--hover-yellow);
+      }
+    }
+
+    &__text {
+      display: block;
+      width: 100%;
+      padding: 10px 18px;
+      border: 1px solid var(--color-black);
+      border-radius: 5px;
+      color: #000;
+      @include fluid-font-size(14px, 16px, 450px, 1000px);
+      &:hover {
+        background-color: #ebebeb;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__cards {
+    flex: 1 1 auto;
+  }
+
+  &__complete-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    & input {
+      text-align: center;
+      padding: 10px 25px;
+      border: 1px solid var(--color-black);
+      border-radius: 5px;
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: left;
+    color: var(--color-black);
+    @include fluid-font-size(15px, 20px, 450px, 1000px);
+    font-weight: 400;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #c1c1c1;
+  }
+
+  &__input-phone {
+    width: 100%;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+
+    &::placeholder {
+      color: #B1B1B1;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__card-container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-white);
+    border-radius: 20px;
+    width: 100%;
+    max-width: 666px;
+    min-height: 330px;
+    padding: 16px 27px 18px 19px;
+    @media (min-width: 700px) {
+      padding: 40px;
+    }
+  }
+
+  &__nav-buttons {
+    display: flex;
+    margin-left: 8px;
+    margin-top: 30px;
+    flex-direction: row;
+    gap: 15px;
+
+    @media (min-width: 700px) {
+      justify-content: flex-end;
+    }
+  }
+
+  &__button-prev {
+    background: none;
+    transition: all 0.4s;
+    &:hover {
+      background-color: #ebebeb;
+      transition: all 0.4s;
+    }
+  }
+  &__button-next {
+    background: var(--color-yellow);
+    border: none;
+    transition: all 0.4s;
+    &:hover {
+      background-color: var(--hover-yellow);
+      transition: all 0.4s;
+    }
+  }
+
+  &__button-prev,
+  &__button-next {
+    font-weight: 700;
+    @include fluid-font-size(14px, 16px, 400px, 1000px);
+
+    @media (min-width: 700px) {
+      max-width: max-content;
+      padding: 9px 32px;
+    }
+  }
+  .quiz__complete-card_active {
+    .quiz__title {
+      @include fluid-font-size(20px, 30px, 400px, 1000px);
+      font-weight: bold;
+      margin-bottom: 20px;
+      border: none;
+    }
+  }
+}

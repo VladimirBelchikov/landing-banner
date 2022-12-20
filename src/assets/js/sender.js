@@ -112,7 +112,7 @@ export default class FormSender {
       const submitButton = form.querySelector('button[type=submit]');
       const buttonDefaultText = submitButton.textContent;
 
-      phoneField.addEventListener('focus', (event) => {
+      phoneField?.addEventListener('focus', (event) => {
         if (event.target.classList.contains('invalid')) {
           event.target.classList.remove('invalid');
           submitButton.textContent = buttonDefaultText;
