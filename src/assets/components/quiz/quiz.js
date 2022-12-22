@@ -138,13 +138,6 @@ class Quiz {
           this.renderSlides(radio.dataset.branch);
           this.swiper.update();
           this.swiper.slideNext();
-          // if (this.swiper.isEnd) {
-          //   const completeCard = this.container.querySelector('.quiz__complete-card');
-          //   completeCard.classList.remove('visually-hidden');
-          //   completeCard.classList.add('quiz__complete-card_active');
-          //   this.container.querySelector('input[name=note]').value = this.getInterview(this.container);
-          //   console.log(this.container);
-          // }
         });
       });
     }

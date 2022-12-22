@@ -2,6 +2,15 @@
   display: none;
   position: relative;
   border-radius: 20px;
+  @media (max-width: 991px) {
+    max-width: 500px;
+  }
+  @media (max-width: 575px) {
+    max-width: 360px;
+  }
+  @media (max-width: 390px) {
+    max-width: 319px;
+  }
 
   &__complete-card {
     display: flex;
@@ -219,4 +228,11 @@
 }
 .quiz.fancybox__content {
   padding: 20px;
+  @media (max-width: 575px) {
+    padding: 14px;
+    padding-bottom: 15px;
+  }
+  @media (max-width: 390px) {
+    padding: 10px;
+  }
 }
