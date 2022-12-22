@@ -3,7 +3,7 @@ import { Fancybox } from '@fancyapps/ui/src/Fancybox/index.js';
 const modalElement = document.querySelector('#callback-modal');
 const callbackButton = document.querySelector('.callback-btn');
 const callbackQuizBtn = document.querySelector('.quiz-callback-btn');
-const dquizModalWindow = document.querySelector('.quiz-modal-wrapper');
+const quizModalWindow = document.querySelector('.quiz');
 
 const modalSlidesElement = document.querySelector('#slides-callback');
 const callbackSlides = document.querySelectorAll('.slider__slide');
@@ -26,9 +26,9 @@ callbackButton?.addEventListener('click', (event) => {
   }]);
 });
 
-callbackQuizBtn?.addEventListener('click', (event) => {
+callbackQuizBtn?.addEventListener('click', () => {
   Fancybox.show([{
-    src: dquizModalWindow,
+    src: quizModalWindow,
     type: 'html',
     autoFocus: false,
     dragToClose: false,
