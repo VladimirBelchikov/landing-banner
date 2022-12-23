@@ -41,7 +41,7 @@ const formSender = new FormSender({
   type: '1469606',
 });
 const quiz = new Quiz({
-  completeText: 'Отлично! <br> Мы подобрали для вас подходящий мини-погрузчик',
+  completeText: 'Спасибо за ответы!',
 });
 document.addEventListener('DOMContentLoaded', () => {
   formSender.init();

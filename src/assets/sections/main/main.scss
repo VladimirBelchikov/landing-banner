@@ -1,33 +1,19 @@
 .main {
-
-  &__banner {
-    margin-top: 60px;
-
-    @media (min-width: 2000px) {
-      margin-top: 100px;
-    }
-    @media (max-width: 991px) {
-      margin-top: 50px;
-    }
-    @media (max-width: 575px) {
-      margin-top: 30px;
-    }
+  & > .row {
+    justify-content: space-between;
   }
-
   &__title {
-    margin-bottom: 15px;
-    max-width: 530px;
+    margin: 50px 0;
     @media (min-width: 2000px) {
       max-width: 760px;
-      margin-bottom: 30px;
     }
     @media (max-width: 575px) {
-      margin-bottom: 30px;
+      margin: 30px 0;
     }
   }
 
   &__ul {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
   }
 
   &__btns {
@@ -38,9 +24,5 @@
 
   &__partners {
     margin-top: 100px;
-
-    @media (max-width: 991px) {
-      display: none;
-    }
   }
 }

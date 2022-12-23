@@ -5,9 +5,9 @@
   gap: 10px;
   max-width: fit-content;
   min-width: 232px;
-  height: 40px;
+  height: 45px;
   padding: 0 25px;
-  @include fluid-font-size(14px, 16px, 767px, 1199px);
+  @include fluid-font-size(15px, 18px, 575px, 1299px);
   font-weight: 700;
   border-radius: 100px;
   color: var(--color-black);
@@ -40,9 +40,9 @@
   gap: 10px;
   max-width: fit-content;
   min-width: 232px;
-  height: 40px;
+  height: 45px;
   padding: 0 25px;
-  @include fluid-font-size(14px, 16px, 767px, 1199px);
+  @include fluid-font-size(15px, 18px, 575px, 1299px);
   font-weight: 700;
   background: rgba(255, 255, 255, 0);
   border-radius: 100px;
@@ -56,7 +56,10 @@
     color: var(--color-black);
     transition: all 0.4s;
   }
-  &:hover svg {
+  .wheel-icon svg path {
+    fill: var(--color-yellow);
+  }
+  &:hover .wheel-icon svg {
     path {
       fill: var(--color-black);
       transition: all 0.4s;

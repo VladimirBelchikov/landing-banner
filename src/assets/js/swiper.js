@@ -1,4 +1,4 @@
-import Swiper, { Navigation, Thumbs } from 'swiper';
+import Swiper, { Navigation, Thumbs, Pagination, Autoplay } from 'swiper';
 
 const thumbsSlider = new Swiper('.thumbsSlider', {
   slidesPerView: 6,

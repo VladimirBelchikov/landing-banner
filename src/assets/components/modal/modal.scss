@@ -191,18 +191,31 @@
     display: block;
     margin-bottom: 15px;
     font-size: 19px;
-    color: var(--color-red);
-    text-transform: uppercase;
   }
 
 }
-
-.modal-content {
-  border: none;
-}
-
-.modal-dialog {
-  margin: 0;
+// Модалка видео
+.video-modal {
+  background: rgba(0, 0, 0, 0);
+  max-width: fit-content;
+  .carousel__button.is-close {
+    color: #FFFFFF;
+    right: 5%;
+    @media (max-width: 575px) {
+      right: 8%;
+    }
+  }
+  iframe {
+    @media (max-width: 767px) {
+      max-width: 500px;
+    }
+    @media (max-width: 575px) {
+      max-width: 350px;
+    }
+    @media (max-width: 380px) {
+      max-width: 310px;
+    }
+  }
 }
 
 
