@@ -36,7 +36,7 @@ const envyboxTimeout = setTimeout(() => {
 
 const formSender = new FormSender({
   createLeadUrl: 'https://collector.centr-to.ru/lead/create',
-  group_id: '1',
+  group_id: '5',
   source: 'diesel.zauberg.ru',
   type: '1407176',
 });
