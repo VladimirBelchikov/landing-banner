@@ -18,14 +18,14 @@ import Quiz from './assets/components/quiz/quiz.js';
 /* eslint-disable no-new */
 const analyticsTimeout = setTimeout(() => {
   new YandexMetrika([{
-    id: 91713588,
+    id: 91840915,
     params: { webvisor: true },
   }]);
-  new MangoOffice(24354);
+  new MangoOffice(23176);
   clearTimeout(analyticsTimeout);
 }, 2000);
 
-new Roistat('52d041b22c9089f178bc2b392b9c821c');
+new Roistat('8d1d08aebc35d0292c2ca7b696150b7e');
 
 const envyboxTimeout = setTimeout(() => {
   new Envybox();
@@ -37,8 +37,8 @@ const envyboxTimeout = setTimeout(() => {
 const formSender = new FormSender({
   createLeadUrl: 'https://collector.centr-to.ru/lead/create',
   group_id: '1',
-  source: 'trommelberg-rus.ru',
-  type: '1469606',
+  source: 'diesel.zauberg.ru',
+  type: '1407176',
 });
 const quiz = new Quiz({
   completeText: 'Спасибо за ответы!',
