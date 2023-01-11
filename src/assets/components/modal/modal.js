@@ -21,6 +21,9 @@ callbackButtons?.forEach((element) => {
     if (event.target.dataset.title) {
       modalElement.querySelector('.modal__title').textContent = event.target.dataset.title;
     }
+    if (event.target.dataset.description) {
+      modalElement.querySelector('.modal__text').textContent = event.target.dataset.description;
+    }
     if (event.target.dataset.comment) {
       modalElement.querySelector('input[name=comment]').value = element.dataset.comment;
     }

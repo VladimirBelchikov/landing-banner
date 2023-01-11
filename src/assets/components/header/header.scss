@@ -2,7 +2,7 @@
   display: flex;
   align-items: flex-start;
   gap: 40px;
-  margin-bottom: 70px;
+  margin-bottom: 50px;
   @media (max-width: 991px) {
     flex-wrap: wrap;
     column-gap: 30px;
@@ -10,12 +10,11 @@
     margin-bottom: 40px;
   }
   @media (max-width: 575px) {
-    flex-direction: column;
     margin-bottom: 15px;
   }
 
-  &__filled-btn {
-   margin-left: auto;
+  &__btn {
+    width: 232px;
     @media (max-width: 991px) {
       margin-left: 0;
       svg {
@@ -38,8 +37,8 @@
   }
 
   &__logo {
-    @media (max-width: 991px) {
-      max-width: 500px;
+    @media (max-width: 1199px) {
+      max-width: 290px;
     }
     @media (max-width: 575px) {
       max-width: 200px;
@@ -51,8 +50,13 @@
     display: flex;
     padding-top: 11px;
     row-gap: 5px;
+    margin-left: auto;
     @media (max-width: 767px) {
       flex-direction: column;
+      margin-left: 0;
+    }
+    @media (max-width: 575px) {
+      padding-top: 5px;
     }
     & > span {
       font-weight: 700;

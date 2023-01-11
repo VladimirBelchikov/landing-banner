@@ -53,6 +53,12 @@
         left: 38%;
       }
     }
+    @media (max-width: 400px) {
+      &::before {
+        top: 25%;
+        left: 34%;
+      }
+    }
   }
 
   &__review {
@@ -65,7 +71,7 @@
   }
 
   &__name {
-    @include fluid-font-size(25px, 30px, 767px, 1199px);
+    @include fluid-font-size(16px, 24px, 767px, 1199px);
     max-width: 320px;
     margin-bottom: 10px;
     color: var(--color-white);
@@ -81,15 +87,15 @@
     letter-spacing: -2px;
   }
 
-  .zau-es15 {
-    background-image: url("../img/video-block/es15.png");
+  .zau-es65y {
+    background-image: url("../img/video-block/e65y.jpg");
   }
 
-  .zau-ds70 {
-    background-image: url("../img/video-block/ds70.png");
+  .zau-mn950 {
+    background-image: url("../img/video-block/mn950.jpg");
   }
 
-  .zau-gs25 {
-    background-image: url("../img/video-block/gs25.png");
+  .zau-b8x {
+    background-image: url("../img/video-block/b8x.png");
   }
 }

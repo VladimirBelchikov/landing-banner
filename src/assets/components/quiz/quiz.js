@@ -153,7 +153,7 @@ class Quiz {
       labelList.push(
         `<label class="quiz-card__answers-container">
           <input type="radio" class="quiz-card__input" name="${item}" value="${item}">
-          <span class="button quiz-card__text">${item}</span>
+          <span class="quiz-card__text">${item}</span>
         </label>`,
       );
     });

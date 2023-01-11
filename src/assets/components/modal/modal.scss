@@ -150,18 +150,6 @@
     }
   }
 
-  &__btn {
-    height: 60px;
-    font-size: 13px;
-    background: var(--color-blue);
-    color: var(--color-white);
-
-    &:hover {
-      background: #23459b;
-      transition: all 0.4s;
-    }
-  }
-
   &__available {
     background: var(--color-yellow);
     padding: 20px;

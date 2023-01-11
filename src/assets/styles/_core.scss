@@ -14,10 +14,12 @@ a {
   text-decoration: none;
   transition: all 0.4s;
 }
+
 button {
   border: none;
   cursor: pointer;
 }
+
 input {
   &:focus-visible {
     outline: none;
@@ -25,8 +27,18 @@ input {
 }
 
 body {
-  background: radial-gradient(99.62% 150.21% at 101.63% 52.83%, #404040 0%, #000000 100%);
+  background: #000000;
   overflow-x: hidden;
+
+  ::-webkit-scrollbar {
+    height: 3px;
+    background-color: #646464;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--color-yellow);
+    border-radius: 9em;
+  }
 }
 
 .page-container {
@@ -40,6 +52,7 @@ body {
     padding: 50px 30px;
   }
 }
+
 .color-red {
   color: var(--color-red);
 }
