@@ -35,4 +35,7 @@
   background-image: url("../img/main-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
+  @media (min-width: 2000px) {
+   background-position: right;
+  }
 }
