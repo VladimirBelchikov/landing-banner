@@ -84,6 +84,7 @@
 
     &__question {
       @include fluid-font-size(20px, 28px, 450px, 1000px);
+      color: var(--color-black);
       font-weight: bold;
       margin: 15px 0 30px;
 

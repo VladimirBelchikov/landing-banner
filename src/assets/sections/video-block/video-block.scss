@@ -1,5 +1,5 @@
 .video-block {
-  margin: 100px 0 50px;
+  margin: 0 0 70px 0;
   @media (max-width: 767px) {
     margin: 60px 0 50px;
   }
@@ -10,7 +10,7 @@
   &__title {
     @include fluid-font-size(30px, 35px, 767px, 1199px);
     text-align: center;
-    color: var(--color-white);
+    color: var(--color-black);
     margin-bottom: 20px;
   }
 

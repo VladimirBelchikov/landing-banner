@@ -1,6 +1,5 @@
 .modal {
   display: none;
-  max-width: 390px;
   height: fit-content;
   color: var(--color-black);
   background: var(--color-white);
@@ -106,6 +105,9 @@
       }
     }
   }
+  &_sm {
+    max-width: 430px;
+  }
 }
 
 .fancybox__carousel.is-draggable .fancybox__slide, .fancybox__carousel.is-draggable .fancybox__slide .fancybox__content {
@@ -205,5 +207,7 @@
     }
   }
 }
+//Модалка с КП
+.modal-kp {
 
-
+}
