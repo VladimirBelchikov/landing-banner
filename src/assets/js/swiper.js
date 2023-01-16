@@ -27,3 +27,12 @@ const innerSlider = new Swiper('.innerSlider', {
     swiper: thumbsSlider,
   },
 });
+const catalogSlider = new Swiper('.catalogSlider', {
+  slidesPerView: 1,
+  slidesPerGroup: 1,
+  modules: [Navigation],
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
