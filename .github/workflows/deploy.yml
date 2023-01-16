@@ -2,7 +2,7 @@ name: Deploy
 
 on:
   push:
-    branches: [ "Zauberg-vilochnye" ]
+    branches: [ "Zauberg-spectehnika" ]
 
 jobs:
   deploy:
