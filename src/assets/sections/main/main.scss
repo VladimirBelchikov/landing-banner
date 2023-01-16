@@ -19,11 +19,7 @@
 
   &__btns {
     display: flex;
-    flex-direction: column;
     gap: 10px;
-    @media (max-width: 991px) {
-      flex-direction: row;
-    }
     @media (max-width: 530px) {
       flex-wrap: wrap;
     }
@@ -38,17 +34,14 @@
 }
 
 .main-wrapper {
-  background-image: url("../img/main-bg.png");
-  background-repeat: no-repeat;
+  background: url("../img/main-bg.png") no-repeat bottom;
   background-size: cover;
-  @media (min-width: 2000px) {
-   background-position: right;
-  }
   @media (max-width: 991px) {
-    background-image: url("../img/bg-mob.png");
-    background-position: center;
+    background: url("../img/bg-mob.png") bottom;
+    background-size: cover;
   }
 }
+
 .video-block-wrapper {
   background: #FFFFFF;
 }

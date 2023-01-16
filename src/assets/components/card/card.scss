@@ -48,11 +48,10 @@
       }
     }
   }
-  &::before {
+  &__quantity {
     position: absolute;
     top: 20px;
     left: 0;
-    content: '19шт';
     color: var(--color-white);
     font-weight: bold;
     background: var(--color-black);
