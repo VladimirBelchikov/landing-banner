@@ -5,16 +5,14 @@ const callbackButtons = document.querySelectorAll('.callback-btn');
 const callbackQuizBtn = document.querySelector('.quiz-callback-btn');
 const quizModalWindow = document.querySelector('.quiz');
 const videoModalWindow = document.querySelector('.video-modal');
+const callbackKpButton = document.querySelector('#callback-kp');
 
 const modalSlidesElement = document.querySelector('#slides-callback');
 const callbackSlides = document.querySelectorAll('.slider__slide');
 const innerSlider = document.querySelector('.innerSlider');
 const thumbsSlider = document.querySelector('.thumbsSlider');
 const openVideoItem = document.querySelectorAll('.video-block__item');
-
-// Fancybox.bind('#callback-modal]', {
-//
-// });
+const modalKp = document.querySelector('.modal-kp');
 
 callbackButtons?.forEach((element) => {
   element.addEventListener('click', (event) => {
@@ -61,7 +59,8 @@ callbackSlides?.forEach((element) => {
       if (masInfo.length > 0) {
         const infoWrapper = modalSlidesElement.querySelector('.modal-slides__info');
         const oldInfo = infoWrapper.children;
-        Array.from(oldInfo).forEach((el) => el.remove());
+        Array.from(oldInfo)
+          .forEach((el) => el.remove());
         infoWrapper.insertAdjacentHTML(
           'afterbegin',
           `<ul>
@@ -82,11 +81,13 @@ callbackSlides?.forEach((element) => {
       if (masImg.length > 0) {
         const swiperWrapper = innerSlider.querySelector('.swiper-wrapper');
         const oldSlides = swiperWrapper.children;
-        Array.from(oldSlides).forEach((el) => el.remove());
+        Array.from(oldSlides)
+          .forEach((el) => el.remove());
 
         const swiperWrapperThumbs = thumbsSlider.querySelector('.swiper-wrapper');
         const oldThumbsSlides = swiperWrapperThumbs.children;
-        Array.from(oldThumbsSlides).forEach((el) => el.remove());
+        Array.from(oldThumbsSlides)
+          .forEach((el) => el.remove());
 
         masImg.forEach((value) => {
           swiperWrapper.insertAdjacentHTML(
@@ -127,4 +128,13 @@ openVideoItem.forEach((element) => {
       dragToClose: false,
     }]);
   });
+});
+
+callbackKpButton?.addEventListener('click', () => {
+  Fancybox.show([{
+    src: modalKp,
+    type: 'html',
+    autoFocus: false,
+    dragToClose: false,
+  }]);
 });

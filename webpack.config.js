@@ -131,7 +131,7 @@ const config = {
     new CopyPlugin({
       patterns: [
         {
-          from: resolve(DIRNAME, 'src/assets/img/inner-slider'),
+          from: resolve(DIRNAME, 'src/assets/img/models'),
           to: resolve(DIRNAME, 'dist/assets'),
         },
       ],

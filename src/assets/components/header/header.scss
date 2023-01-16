@@ -23,6 +23,9 @@
     grid-area: btn;
     width: 232px;
     margin-left: auto;
+    @media (min-width: 2000px) {
+      width: 260px;
+    }
     @media (max-width: 991px) {
       svg {
         max-width: 15px;
