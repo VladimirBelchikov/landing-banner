@@ -1,6 +1,12 @@
 .catalogSlider {
   .swiper-wrapper {
     max-width: 300px;
+    @media (max-width: 1199px) {
+      max-width: 281px;
+    }
+    @media (max-width: 991px) {
+      max-width: 255px;
+    }
     .swiper-slide {
       img {
         max-width: 300px;
@@ -19,16 +25,17 @@
     height: 35px;
     line-height: 42px;
     text-align: center;
-    color: #fff;
-    background-color: var(--color-black);
+    color: var(--color-black);
+    background-color: var(--color-white);
     border: none;
     border-radius: 50%;
-    box-shadow: 0 0 4px rgb(47 47 47 / 54%);
+    box-shadow: 0 0 4px rgb(47 47 47 / 77%);
     transform: translateY(-50%);
     z-index: 40;
   }
   .swiper-button-next::after, .swiper-button-prev::after {
     font-size: 12px;
+    font-weight: bold;
   }
   .swiper-button-prev {
     left: 3%;
