@@ -39,6 +39,9 @@
 .main-wrapper {
   background: url("../img/main-bg.png") no-repeat bottom;
   background-size: cover;
+  @media (min-width: 2115px) {
+    background-size: contain;
+  }
   @media (max-width: 991px) {
     background: url("../img/bg-mob.png") bottom;
     background-size: cover;
