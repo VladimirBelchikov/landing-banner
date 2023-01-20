@@ -121,6 +121,8 @@ openVideoItem.forEach((element) => {
   element.addEventListener('click', (event) => {
     if (event.currentTarget.dataset.video) {
       videoModalWindow.querySelector('iframe').src = element.dataset.video;
+    } if (!event.currentTarget.dataset.video) {
+      return;
     }
     Fancybox.show([{
       src: videoModalWindow,

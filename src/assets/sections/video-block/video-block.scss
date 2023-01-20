@@ -97,5 +97,12 @@
 
   .zau-b8x {
     background-image: url("../img/video-block/b8x.png");
+    cursor: auto;
+    &:hover {
+      filter: brightness(1);
+    }
+    &::before {
+      display: none;
+    }
   }
 }

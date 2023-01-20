@@ -1,4 +1,6 @@
-import Swiper, { Navigation, Thumbs, Pagination, Autoplay } from 'swiper';
+import Swiper, {
+  Navigation, Thumbs, Pagination, Autoplay,
+} from 'swiper';
 
 const thumbsSlider = new Swiper('.thumbsSlider', {
   slidesPerView: 6,
@@ -30,6 +32,7 @@ const innerSlider = new Swiper('.innerSlider', {
 const catalogSlider = new Swiper('.catalogSlider', {
   slidesPerView: 1,
   slidesPerGroup: 1,
+  allowTouchMove: false,
   modules: [Navigation],
   navigation: {
     nextEl: '.swiper-button-next',

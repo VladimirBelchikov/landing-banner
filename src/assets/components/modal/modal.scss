@@ -234,6 +234,9 @@
     @media (max-width: 767px) {
       width: 100%;
     }
+    @media (max-width: 575px) {
+      padding: 25px;
+    }
 
     &:last-of-type {
       width: 50%;
@@ -250,6 +253,9 @@
         border-top-right-radius: 0;
         border-bottom-right-radius: 20px;
         border-bottom-left-radius: 20px;
+      }
+      @media (max-width: 575px) {
+        height: 180px;
       }
     }
   }

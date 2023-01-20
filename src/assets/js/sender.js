@@ -62,9 +62,7 @@ export default class FormSender {
     if (!this.loading) {
       this.loading = true;
       if (submitButton) this.disableButton(submitButton);
-      if (submitButton.classList.contains('download-file-button')) this.downloadFile('assets/mn850.png');
-      // TODO убрать return
-      return;
+      if (submitButton.classList.contains('download-file-button')) this.downloadFile('assets/Catalog.pdf');
       fetch(this.createLeadUrl, {
         method: 'POST',
         mode: 'no-cors',
