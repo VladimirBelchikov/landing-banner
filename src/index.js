@@ -18,14 +18,14 @@ import Quiz from './assets/components/quiz/quiz.js';
 /* eslint-disable no-new */
 const analyticsTimeout = setTimeout(() => {
   new YandexMetrika([{
-    id: 91840915,
+    id: 92146759,
     params: { webvisor: true },
   }]);
-  new MangoOffice(23176);
+  new MangoOffice(27551);
   clearTimeout(analyticsTimeout);
 }, 2000);
 
-new Roistat('8d1d08aebc35d0292c2ca7b696150b7e');
+new Roistat('d4dde63749e8c4f8285a234e16b28afc');
 
 const envyboxTimeout = setTimeout(() => {
   new Envybox();
@@ -36,12 +36,12 @@ const envyboxTimeout = setTimeout(() => {
 
 const formSender = new FormSender({
   createLeadUrl: 'https://collector.centr-to.ru/lead/create',
-  group_id: '5',
-  source: 'diesel.zauberg.ru',
-  type: '1407176',
+  group_id: '4',
+  source: 'zauberg.ru',
+  type: '1469902',
 });
 const quiz = new Quiz({
-  completeText: 'Спасибо за ответы!',
+  completeText: 'Информация передана в отдел продаж!',
 });
 document.addEventListener('DOMContentLoaded', () => {
   formSender.init();
