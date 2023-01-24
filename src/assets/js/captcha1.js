@@ -9,6 +9,7 @@ function setInitialValues() {
   captchaModal.querySelector('.captcha-block__text').style.color = 'black';
   captchaModal.querySelector('[name=captcha]').value = '';
   captchaModal.querySelector('#captcha-btn').style.cursor = 'pointer';
+  captchaModal.querySelector('#captcha-btn').removeAttribute('disabled');
 }
 
 function createCaptcha(container) {
@@ -46,8 +47,7 @@ function validateCaptcha() {
     captchaModal.querySelector('.captcha-block__text').textContent = 'Подождите...';
     captchaModal.querySelector('.captcha-block__text').style.color = 'black';
     captchaModal.querySelector('#captcha-btn').style.cursor = 'not-allowed';
-    captchaModal.querySelector('#captcha-btn')
-      .setAttribute('disabled', 'true');
+    captchaModal.querySelector('#captcha-btn').setAttribute('disabled', 'true');
     return true;
   }
   createCaptcha(captchaModal);

@@ -75,6 +75,9 @@ export default class FormSender {
             if (formData.get('delay') === '0') {
               YandexMetrika.reachGoal('supercel');
               MailRuCounter.reachGoal('supercel');
+              this.enableButton(submitButton, 'Скачать файл PDF\n' +
+                '            (1,5мб)\n' +
+                '          ');
             }
           })
           .catch((err) => {
@@ -86,7 +89,8 @@ export default class FormSender {
           .finally(() => {
             this.loading = false;
           });
-        captchaModal.querySelector('.is-close').click();
+        captchaModal.querySelector('.is-close')
+          .click();
         return;
       }
       fetch(this.createLeadUrl, {
