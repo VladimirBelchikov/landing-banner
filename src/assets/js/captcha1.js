@@ -1,3 +1,5 @@
+import { Fancybox } from '@fancyapps/ui';
+
 const captchaModal = document.querySelector('.captcha');
 const modalBtn = captchaModal.querySelector('#captcha-btn');
 let captchaCode = '';
