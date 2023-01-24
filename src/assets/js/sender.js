@@ -2,7 +2,9 @@ import { setUtmsToCookie, getUtmsFromCookie } from './utms.js';
 import { getCookie } from './cookie.js';
 import YandexMetrika from './analytics/yandex-metrika.js';
 import MailRuCounter from './analytics/mail-ru-counter.js';
+import { modalBtn, validateCaptcha, formSubmitHandler, captchaModal } from './captcha1.js';
 
+let formInfo = '';
 /* eslint-disable class-methods-use-this */
 export default class FormSender {
   constructor(props) {
@@ -62,7 +64,31 @@ export default class FormSender {
     if (!this.loading) {
       this.loading = true;
       if (submitButton) this.disableButton(submitButton);
-      if (submitButton.classList.contains('download-file-button')) this.downloadFile('assets/Catalog.pdf');
+      if (submitButton.classList.contains('download-file-button')) {
+        this.downloadFile('assets/Catalog.pdf');
+        fetch(this.createLeadUrl, {
+          method: 'POST',
+          mode: 'no-cors',
+          body: formData,
+        })
+          .then(() => {
+            if (formData.get('delay') === '0') {
+              YandexMetrika.reachGoal('supercel');
+              MailRuCounter.reachGoal('supercel');
+            }
+          })
+          .catch((err) => {
+            // TODO обработать ошибку, выдать пользователю сообщение об отправке
+            if (formData.get('delay') === '0') {
+              this.enableButton(submitButton, 'Повторить отправку', false);
+            }
+          })
+          .finally(() => {
+            this.loading = false;
+          });
+        captchaModal.querySelector('.is-close').click();
+        return;
+      }
       fetch(this.createLeadUrl, {
         method: 'POST',
         mode: 'no-cors',
@@ -101,20 +127,6 @@ export default class FormSender {
     if (!isSent) button.removeAttribute('disabled');
   }
 
-  async checkGrecaptchaKey(token) {
-    const body = `token=${encodeURIComponent(token)}`;
-
-    const response = await fetch('/recaptcha.php', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-      },
-      body,
-    });
-
-    return response.json();
-  }
-
   init() {
     document.querySelectorAll('form')
       .forEach((form) => {
@@ -143,26 +155,13 @@ export default class FormSender {
             submitButton.textContent = 'Ошибка';
             return;
           }
-          const formData = this.createFormData(form, 0);
-          if (!window.grecaptcha || !this.googleRecaptchaKey) {
-            this.postForm(formData, submitButton);
-          } else {
-            window.grecaptcha.ready(() => {
-              window.grecaptcha.execute(
-                this.googleRecaptchaKey,
-                { action: 'submit' },
-              )
-                .then(async (token) => {
-                  const { success } = await this.checkGrecaptchaKey(token);
-                  if (success) {
-                    this.postForm(formData, submitButton);
-                  } else {
-                    // eslint-disable-next-line no-alert
-                    alert('Сайт посчитал вас роботом, пожалуйста обновите страницу');
-                  }
-                });
-            });
-          }
+          const formInfo = this.createFormData(form, 0);
+          formSubmitHandler();
+          modalBtn?.addEventListener('click', () => {
+            if (validateCaptcha()) {
+              this.postForm(formInfo, submitButton);
+            }
+          });
         });
       });
   }
