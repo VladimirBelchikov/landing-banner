@@ -4,7 +4,6 @@ import YandexMetrika from './analytics/yandex-metrika.js';
 import MailRuCounter from './analytics/mail-ru-counter.js';
 import { modalBtn, validateCaptcha, formSubmitHandler, captchaModal } from './captcha1.js';
 
-let formInfo = '';
 /* eslint-disable class-methods-use-this */
 export default class FormSender {
   constructor(props) {
@@ -58,6 +57,7 @@ export default class FormSender {
     downloadLink.setAttribute('href', url);
     downloadLink.setAttribute('download', 'Коммерческое предложение');
     downloadLink.click();
+    downloadLink.remove();
   }
 
   postForm(formData, submitButton = undefined) {
@@ -65,7 +65,6 @@ export default class FormSender {
       this.loading = true;
       if (submitButton) this.disableButton(submitButton);
       if (submitButton.classList.contains('download-file-button')) {
-        this.downloadFile('assets/Catalog.pdf');
         fetch(this.createLeadUrl, {
           method: 'POST',
           mode: 'no-cors',
@@ -75,9 +74,32 @@ export default class FormSender {
             if (formData.get('delay') === '0') {
               YandexMetrika.reachGoal('supercel');
               MailRuCounter.reachGoal('supercel');
-              this.enableButton(submitButton, 'Скачать файл PDF\n' +
-                '            (1,5мб)\n' +
-                '          ');
+            }
+          })
+          .catch((err) => {
+            // TODO обработать ошибку, выдать пользователю сообщение об отправке
+            if (formData.get('delay') === '0') {
+              this.enableButton(submitButton, 'Повторить отправку', false);
+            }
+          })
+          .finally(() => {
+            this.loading = false;
+            globalThis.location.href = '/file-loaded.html';
+            this.downloadFile('assets/Catalog.pdf');
+          });
+      } else {
+        fetch(this.createLeadUrl, {
+          method: 'POST',
+          mode: 'no-cors',
+          body: formData,
+        })
+          .then(() => {
+            if (formData.get('delay') === '0') {
+              YandexMetrika.reachGoal('supercel');
+              MailRuCounter.reachGoal('supercel');
+
+              this.enableButton(submitButton, 'Заявка отправлена', true);
+              globalThis.location.href = '/thank.html';
             }
           })
           .catch((err) => {
@@ -89,33 +111,7 @@ export default class FormSender {
           .finally(() => {
             this.loading = false;
           });
-        captchaModal.querySelector('.is-close')
-          .click();
-        return;
       }
-      fetch(this.createLeadUrl, {
-        method: 'POST',
-        mode: 'no-cors',
-        body: formData,
-      })
-        .then(() => {
-          if (formData.get('delay') === '0') {
-            YandexMetrika.reachGoal('supercel');
-            MailRuCounter.reachGoal('supercel');
-
-            this.enableButton(submitButton, 'Заявка отправлена', true);
-            globalThis.location.href = '/thank.html';
-          }
-        })
-        .catch((err) => {
-          // TODO обработать ошибку, выдать пользователю сообщение об отправке
-          if (formData.get('delay') === '0') {
-            this.enableButton(submitButton, 'Повторить отправку', false);
-          }
-        })
-        .finally(() => {
-          this.loading = false;
-        });
     }
   }
 
@@ -159,11 +155,11 @@ export default class FormSender {
             submitButton.textContent = 'Ошибка';
             return;
           }
-          const formInfo = this.createFormData(form, 0);
+          const formData = this.createFormData(form, 0);
           formSubmitHandler();
-          modalBtn?.addEventListener('click', () => {
+          modalBtn.addEventListener('click', () => {
             if (validateCaptcha()) {
-              this.postForm(formInfo, submitButton);
+              this.postForm(formData, submitButton);
             }
           });
         });
