@@ -76,7 +76,10 @@
     margin-bottom: 10px;
     color: var(--color-white);
     line-height: 1;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
+    @include media-breakpoint-down(sm) {
+      letter-spacing: 1px;
+    }
   }
 
   &__model {
