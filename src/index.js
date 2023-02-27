@@ -14,6 +14,7 @@ import Envybox from './assets/js/analytics/envybox.js';
 import FormSender from './assets/js/sender.js';
 import Roistat from './assets/js/analytics/roistat.js';
 import Quiz from './assets/components/quiz/quiz.js';
+import Botfaqtor from './assets/js/analytics/botfaqtor.js';
 
 /* eslint-disable no-new */
 const analyticsTimeout = setTimeout(() => {
@@ -32,7 +33,7 @@ const envyboxTimeout = setTimeout(() => {
   clearTimeout(envyboxTimeout);
 }, 4000);
 
-/* eslint-enable no-new */
+new Botfaqtor(37040);
 
 const formSender = new FormSender({
   createLeadUrl: 'https://collector.centr-to.ru/lead/create',
