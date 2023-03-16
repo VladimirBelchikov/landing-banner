@@ -1,0 +1,11 @@
+.captcha {
+  align-items: center;
+  text-align: center;
+  z-index: 1111;
+  .captcha-block {
+    &__text {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+  }
+}

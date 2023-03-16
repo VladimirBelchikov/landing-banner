@@ -2,7 +2,7 @@
 #
 #on:
 #  push:
-#    branches: [ "Zauberg-vilochnye" ]
+#    branches: [ "Zauberg-diesel" ]
 #
 #jobs:
 #  deploy:
