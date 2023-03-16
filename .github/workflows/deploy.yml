@@ -1,25 +1,25 @@
-name: Deploy
-
-on:
-  push:
-    branches: [ "Zauberg-vilochnye" ]
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [16.x]
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
-      - run: set -eu
-      - run: mkdir "$HOME/.ssh"
-      - run: echo "${{ secrets.SSH_PRIVATE_KEY }}" > "$HOME/.ssh/id_rsa"
-      - run: chmod 600 "$HOME/.ssh/id_rsa"
-
-      - run: npm ci
-      - run: npm run build
-      - run: cd ./dist && rsync -e "ssh -i $HOME/.ssh/id_rsa -o StrictHostKeyChecking=no" --archive --compress --delete . a49535_cto-test@a49535.ftp.mchost.ru:httpdocs
+#name: Deploy
+#
+#on:
+#  push:
+#    branches: [ "Zauberg-vilochnye" ]
+#
+#jobs:
+#  deploy:
+#    runs-on: ubuntu-latest
+#    strategy:
+#      matrix:
+#        node-version: [16.x]
+#    steps:
+#      - uses: actions/checkout@v2
+#      - uses: actions/setup-node@v1
+#        with:
+#          node-version: ${{ matrix.node-version }}
+#      - run: set -eu
+#      - run: mkdir "$HOME/.ssh"
+#      - run: echo "${{ secrets.SSH_PRIVATE_KEY }}" > "$HOME/.ssh/id_rsa"
+#      - run: chmod 600 "$HOME/.ssh/id_rsa"
+#
+#      - run: npm ci
+#      - run: npm run build
+#      - run: cd ./dist && rsync -e "ssh -i $HOME/.ssh/id_rsa -o StrictHostKeyChecking=no" --archive --compress --delete . a49535_cto-test@a49535.ftp.mchost.ru:httpdocs
